@@ -1,0 +1,118 @@
+{% load static %}
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="google" content="notranslate">
+	<title>
+		{% block title %} oops! {% endblock %}
+	</title>
+	<style type="text/css">
+
+		body {
+		  -webkit-touch-callout: none;
+			-webkit-user-select: none;
+			 -khtml-user-select: none;
+			   -moz-user-select: none;
+				-ms-user-select: none;
+					user-select: none;
+		  font-family: Arial, sans-serif;
+		  padding: 0;
+		  margin: 0;
+		  background-color: #000600;
+		}
+	
+		.server_error {
+		  width: 243px;
+		  height: 25px;
+		  margin: 0 auto;
+		  margin-top: 250px;
+		  padding: 0;
+		  font-size: 28px;
+		  font-weight: bold;
+		  color: #00af00;
+		  text-shadow: 0px 0px 15px #00af00;
+		}
+	
+		a {
+		  text-decoration: none;
+		  font-size: 14px;
+		  color: #008700;
+		  padding: 0;
+		  margin: 0;
+		  margin-top: 20px;
+		  margin-left: -5px;
+		  opacity: 1;
+		  animation-name: a-opacity;
+		  animation-duration: 5s;
+		}
+	
+		a:focus,
+		a:hover,
+		a:active {
+		  color: #87ff5f;
+		  font-size: 14px;
+		  text-shadow: 0px 0px 10px #00ff00;
+		}
+	
+		.page_500 {
+		  width: 200px;
+		  height: 95px;
+		  list-style: none;
+		  display: grid;
+		  margin: 0 auto;
+		  padding: 0;
+		  grid-template-columns: repeat(3, 1fr);
+		}
+	
+		.page_500 div {
+		  margin-top: 170px;
+		  font-size: 120px;
+		  font-weight: bold;
+		  color: #000600;
+		  text-shadow: 0px 0px 50px #005f00;
+		  animation: page_500-scale 0.2s linear alternate infinite;
+		}
+	
+		@keyframes page_500-scale { 100% { transform: scale(1.3); opacity: 0.3; } }
+	
+		.page_500 div:nth-child(1) { z-index: 2; }
+		.page_500 div:nth-child(2) { z-index: 1; }
+		.page_500 div:nth-child(3) { z-index: 0; }
+		.page_500 div:nth-child(1) { animation-delay: 0s; }
+		.page_500 div:nth-child(2) { animation-delay: 0.1s;	}
+		.page_500 div:nth-child(3) { animation-delay: 0.2s; }
+	
+		@keyframes a-opacity {
+		  from {opacity: 0;}
+		  to {opacity: 1;}
+		}
+	
+		@media screen and (max-width: 420px) {
+		  .page_500 div {
+			margin-top: 120px;
+			font-size: 120px;
+		  }
+	
+		  .server_error {
+			margin-top: 220px;
+		  }
+		}
+	</style>
+</head>
+<body style="background-color: #000600;">
+	<p style="font-size: 6px; color: #00af00;">100011111101100111001100010111100110100001100000011010010011000011101011001011101100010</p>
+    <div class="page_500">
+        <div>5</div>
+	    <div>0</div>
+	    <div>0</div>
+    </div>
+	<div class="server_error">
+	    <p style="line-height: 0px;"> Server ERROR :( </p>
+	</div>
+	<div style="width: 200px; height: 50px; margin: 0 auto;">
+	    <a class="head_link" style="line-height: 0px;" href="{% url 'head_page_url' %}"> alexivshin.pythonanywhere.com</a>
+	</div>
+</body>
+</html>
